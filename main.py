@@ -695,7 +695,10 @@ class MP():
         return btn
     
     def stop_music(self):
-        pygame.mixer.music.stop()
+        try:
+            pygame.mixer.music.stop()
+        except:
+            pass
         self.destroy_bar()
         self.play_pause_btn['image'] = self.playimg
         self.play_pause_btn.image = self.playimg
@@ -758,12 +761,16 @@ class MP():
                     time.sleep(0.1)
                 except:
                     break
-            else:
-                break
-            if (pygame.mixer.music.get_pos()/1000)+self.b >= self.dur:
-                self.stop_music()
-                self.progress.destroy()
-                self.label_progress.destroy()
+            if (pygame.mixer.music.get_pos()/1000)+self.b >= self.dur or (pygame.mixer.music.get_pos()/1000)+self.b < 0:
+                try:
+                    self.stop_music()
+                except:
+                    pass
+                try:
+                    self.progress.destroy()
+                    self.label_progress.destroy()
+                except:
+                    pass
                 if self.pl == 1:
                     self.songindex += 1
                     if self.songindex >= len(self.songpathlist):
@@ -773,6 +780,9 @@ class MP():
                         self.over = 0
                     threading.Thread(target=self.loadsong).start()
                 break
+            if self.play_active == 0:
+                break
+    
         if self.over == 1:
             self.startplaylist()
     
