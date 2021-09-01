@@ -25,6 +25,7 @@ If you are getting errors with ImageTk, then run this code :
 2. sudo apt-get install python3-pil.imagetk
 
 If you are getting errors then you can try this command :
+
 sudo pip3 install --upgrade speechrecognition && sudo pip3 install --upgrade stagger && sudo pip3 install --upgrade ffmpeg && sudo pip3 install --upgrade mutagen && sudo pip3 install --upgrade mutagen && sudo pip3 install --upgrade youtube_search && sudo pip3 install --upgrade pafy && sudo pip3 install --upgrade pillow && sudo pip3 install --upgrade pygame && sudo pip3 install --upgrade pydub && sudo pip3 install --upgrade pyaudio && sudo pip3 install --upgrade pillow && sudo pip3 install -U youtube-dl
 
 If you are getting any other error like related to module not found, then please solve it by searching it on Google.
