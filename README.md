@@ -9,13 +9,15 @@
 6. pip3 install stagger
 7. pip3 install SpeechRecognition
 8. pip3 install ffmpeg
-9. sudo apt-get install portaudio19-dev
-10. pip3 install pyaudio
-11. pip3 install mutagen
-12. pip3 install pafy
-13. pip3 install pillow
-14. pip3 install pygame
-15. pip3 install pydub
+9. pip3 install ffprobe
+10. sudo apt-get install portaudio19-dev
+11. pip3 install pyaudio
+12. pip3 install mutagen
+13. pip3 install youtube_search
+14. pip3 install pafy
+15. pip3 install pillow
+16. pip3 install pygame
+17. pip3 install pydub
 
 After this run sudo python3 main.py (Don't forget to add sudo if you are not logged in as a root user)
 If you are getting errors with ImageTk, then run this code : 
